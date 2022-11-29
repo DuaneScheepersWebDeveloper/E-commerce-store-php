@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce-store-php",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuaneScheepersWebDeveloper/E-commerce-store-php.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuaneScheepersWebDeveloper/E-commerce-store-php/issues"
+  },
+  "homepage": "https://github.com/DuaneScheepersWebDeveloper/E-commerce-store-php#readme",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}
