@@ -70,7 +70,7 @@ button, button:focus {
   color: pink;
 }
 
-#banner-area img {
+#banner-area .item {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -80,39 +80,85 @@ button, button:focus {
   height: 700px;
 }
 
-#top-sale .owl-carousel .item .product a {
+#top-sale .owl-carousel .item .product a, #new-gloves .owl-carousel .item .product a {
   overflow: hidden;
 }
-#top-sale .owl-carousel .item .product img {
+#top-sale .owl-carousel .item .product img, #new-gloves .owl-carousel .item .product img {
   transition: transform 0.5s ease;
   height: 12rem;
   width: auto;
   margin-bottom: 2rem;
 }
-#top-sale .owl-carousel .item .product img:hover {
+#top-sale .owl-carousel .item .product img:hover, #new-gloves .owl-carousel .item .product img:hover {
   transform: scale(1.1);
 }
-#top-sale .owl-carousel .owl-nav button {
+#top-sale .owl-carousel .owl-nav button, #new-gloves .owl-carousel .owl-nav button {
   position: absolute;
   top: 30%;
   outline: none;
 }
-#top-sale .owl-carousel .owl-nav button.owl-prev {
+#top-sale .owl-carousel .owl-nav button.owl-prev, #new-gloves .owl-carousel .owl-nav button.owl-prev {
   left: 0;
 }
 #top-sale .owl-carousel .owl-nav button.owl-prev span,
-#top-sale .owl-carousel .owl-nav button.owl-next span {
+#top-sale .owl-carousel .owl-nav button.owl-next span, #new-gloves .owl-carousel .owl-nav button.owl-prev span,
+#new-gloves .owl-carousel .owl-nav button.owl-next span {
   font-size: 35px;
   color: #6f2232;
   padding: 0 1rem;
 }
-#top-sale .owl-carousel .owl-nav button.owl-prev span {
+#top-sale .owl-carousel .owl-nav button.owl-prev span, #new-gloves .owl-carousel .owl-nav button.owl-prev span {
   margin-left: -4rem;
 }
-#top-sale .owl-carousel .owl-nav button.owl-next {
+#top-sale .owl-carousel .owl-nav button.owl-next, #new-gloves .owl-carousel .owl-nav button.owl-next {
   right: 0;
 }
-#top-sale .owl-carousel .owl-nav button.owl-next span {
+#top-sale .owl-carousel .owl-nav button.owl-next span, #new-gloves .owl-carousel .owl-nav button.owl-next span {
+  margin-right: -4rem;
+}
+
+.custom-product {
+  width: 200px;
+}
+
+#special-price .grid .grid-item {
+  margin-right: 12rem;
+  margin-top: 1rem;
+}
+
+#new-gloves .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#new-gloves .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+  height: 12rem;
+  width: auto;
+  margin-bottom: 2rem;
+}
+#new-gloves .owl-carousel .item .product img:hover {
+  transform: scale(1.1);
+}
+#new-gloves .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+#new-gloves .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+#new-gloves .owl-carousel .owl-nav button.owl-prev span,
+#new-gloves .owl-carousel .owl-nav button.owl-next span {
+  font-size: 35px;
+  color: #6f2232;
+  padding: 0 1rem;
+}
+#new-gloves .owl-carousel .owl-nav button.owl-prev span {
+  margin-left: -4rem;
+}
+#new-gloves .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+#new-gloves .owl-carousel .owl-nav button.owl-next span {
   margin-right: -4rem;
 }
 
