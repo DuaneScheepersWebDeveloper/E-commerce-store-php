@@ -1,0 +1,11 @@
+<?php
+//http://localhost/E-commerce-store-php/index.php
+include("./template/partials/header.php");
+include("./template/partials/banner-area.php");
+include("./template/partials/top-sale.php");
+include("./template/partials/special-price.php");
+include("./template/partials/banner-adds-1.php");
+include("./template/partials/new-gloves.php");
+include("./template/partials/banner-adds-2.php");
+include("./template/partials/footer.php");
+?>
