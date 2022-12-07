@@ -35,11 +35,11 @@ button, button:focus {
 }
 
 .color-primary {
-  color: blue;
+  color: #6f2232;
 }
 
 .color-primary-bg {
-  background: blue;
+  background: #6f2232;
 }
 
 .color-secondary {
@@ -103,7 +103,7 @@ button, button:focus {
 #top-sale .owl-carousel .owl-nav button.owl-prev span,
 #top-sale .owl-carousel .owl-nav button.owl-next span {
   font-size: 35px;
-  color: blue;
+  color: #6f2232;
   padding: 0 1rem;
 }
 #top-sale .owl-carousel .owl-nav button.owl-prev span {
@@ -148,7 +148,7 @@ button, button:focus {
 #new-gloves .owl-carousel .owl-nav button.owl-prev span,
 #new-gloves .owl-carousel .owl-nav button.owl-next span {
   font-size: 35px;
-  color: blue;
+  color: #6f2232;
   padding: 0 1rem;
 }
 #new-gloves .owl-carousel .owl-nav button.owl-prev span {

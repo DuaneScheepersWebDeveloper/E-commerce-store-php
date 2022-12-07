@@ -1,24 +1,34 @@
+<?php 
+  $item_id = $_GET['item_id'] ?? 1;
+  foreach ($product->getData() as $item) :
+      if ($item['item_id'] == $item_id) :
+?>
 <section id="product" class="py-3">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <img src="./static/assets/images/1.png" alt="product"
+              <img src="<?php echo $item['item_image'] ?? "./static/assets/products/1.png" ?>" alt="product"
                 class="img-fluid">
-              <div class="form-row row pt-4 font-size-16 font-baloo">
+              <div class="form-row row pt-4 font-size-16 font-arial">
                 <div class="col">
-                  <button type="submit" class="btn btn-danger form-control">Proceed
-                    to Buy</button>
+                  <a href="cart.php" type="submit" class="btn btn-danger form-control">Proceed
+                    to Buy</a>
                 </div>
                 <div class="col">
-                  <button type="submit" class="btn btn-warning form-control">Add
-                    to Cart</button>
+                <?php
+                        if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
+                            echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
+                        }else{
+                            echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
+                        }
+                        ?>
                 </div>
               </div>
             </div>
 
             <div class="col-sm-6">
-              <h5 class="font-baloo font-size-20">Adidas Hybrid 25 Boxing Gloves</h5>
-              <small>by Adidas</small>
+              <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
+              <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
               <div class="d-flex">
                 <div class="rating text-warning font-size-12">
                   <span><i class="fas fa-star"></i></span>
@@ -34,17 +44,17 @@
               <table class="my-3">
                 <tr class="font-rale font-size-14">
                   <td>M.R.P:</td>
-                  <td><strike>R399.90</strike></td>
+                  <td><strike>R<?php echo $item['item_price']+20 ?? 0; ?>.00</strike></td>
                 </tr>
                 <tr class="font-rale font-size-14">
                   <td>Deal Price:</td>
-                  <td class="font-size-20 text-danger">R<span>389.00</span><small
+                  <td class="font-size-20 text-danger">R<span><?php echo $item['item_price'] ?? 0; ?></span><small
                       class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of
                       all taxes</small></td>
                 </tr>
                 <tr class="font-rale font-size-14">
                   <td>You Save:</td>
-                  <td><span class="font-size-16 text-danger">R10.00</span></td>
+                  <td><span class="font-size-16 text-danger">R20.00</span></td>
                 </tr>
               </table>
               <!---    !product price -->
@@ -64,7 +74,7 @@
                       <span class="fas fa-truck border p-3 rounded-pill"></span>
                     </div>
                     <a href="#" class="font-rale font-size-12">Daily Tuition
-                      <br>Deliverd</a>
+                      <br>Delivered</a>
                   </div>
                   <div class="return text-center mr-5">
                     <div class="font-size-20 my-2 color-secondary">
@@ -150,3 +160,7 @@
           </div>
         </div>
       </section>
+      <?php
+        endif;
+        endforeach;
+?>
