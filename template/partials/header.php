@@ -1,3 +1,6 @@
+<?php
+// session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,7 @@
   require('./inc/functions.php');
     ?>
 </head>
+
 <body>
   <!-- header -->
 <header>
@@ -26,7 +30,7 @@
     <p class="font-arial font-size-12 text-black-50 m-0">6 Beach Rd, Woodstock, Cape Town, 8000(Generic address of a business)</p>
     <div class="font-arial font-size-14">
       <a href="#" class="px-3 border-right border-left text-dark">Login</a>
-      <a href="#" class="px-3 border-right text-dark">WishList <span class="color-wishlist"><i class="fa-solid fa-heart"></i></span></a>
+      <a href="cart.php" class="px-3 border-right text-dark">WishList <span class="color-wishlist"><i class="fa-solid fa-heart"></i></span></a>
     </div>
   </div>
 
@@ -41,9 +45,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php">Products</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="brands.php">Category by brand<i class="fas fa-chevron-down"></i></a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#">Find us</a>
           </li>

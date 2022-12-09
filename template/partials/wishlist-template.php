@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
-        <h5 class="font-baloo font-size-20">Wishlist</h5>
+        <h5 class="font-arial font-size-20">Wishlist</h5>
 
         <!--  shopping cart items   -->
         <div class="row">
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 <img src="<?php echo $item['item_image'] ?? "./assets/products/1.png" ?>" style="height: 120px;" alt="cart1" class="img-fluid">
                             </div>
                             <div class="col-sm-8">
-                                <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
+                                <h5 class="font-arial font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
                                 <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
                                 <!-- product rating -->
                                 <div class="d-flex">
@@ -49,12 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                                     <form method="post">
                                         <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                        <button type="submit" name="delete-cart-submit" class="btn font-baloo text-danger pl-0 pr-3 border-right">Delete</button>
+                                        <button type="submit" name="delete-cart-submit" class="btn font-arial text-danger pl-0 pr-3 border-right">Delete</button>
                                     </form>
 
                                     <form method="post">
                                         <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                        <button type="submit" name="cart-submit" class="btn font-baloo text-danger">Add to Cart</button>
+                                        <button type="submit" name="cart-submit" class="btn font-arial text-danger">Add to Cart</button>
                                     </form>
 
 

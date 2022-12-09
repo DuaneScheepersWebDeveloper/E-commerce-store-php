@@ -6,7 +6,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
   }
 }
-
 ?>
 
 <section id="new-gloves">

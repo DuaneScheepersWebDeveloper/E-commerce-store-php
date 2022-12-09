@@ -44,6 +44,7 @@ class Cart
             if ($result){
                 // Reload Page
                 header("Location: " . $_SERVER['PHP_SELF']);
+                // header('location: index.php');
             }
         }
     }

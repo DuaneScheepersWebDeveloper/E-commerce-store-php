@@ -1,4 +1,4 @@
-<section id="banner-area">
+<!-- <section id="banner-area">
     <div class="owl-carousel owl-theme">
       <div class="item">
         <img src="./static/assets/images/Hero.jpg" alt="">
@@ -10,5 +10,9 @@
         <img src="./static/assets/images/Hero2.5.jpg" alt="">
       </div>
     </div>
-  </section>
+  </section> -->
+
+  <section id="banner-area">
   
+    <h1>Home of premium gloves.</h1>
+  </section>

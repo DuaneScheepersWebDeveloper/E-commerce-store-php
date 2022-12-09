@@ -1,7 +1,9 @@
-<?php 
-  $item_id = $_GET['item_id'] ?? 1;
-  foreach ($product->getData() as $item) :
-      if ($item['item_id'] == $item_id) :
+<?php
+
+
+    $item_id = $_GET['item_id'] ?? 1;
+    foreach ($product->getData() as $item) :
+        if ($item['item_id'] == $item_id) :
 ?>
 <section id="product" class="py-3">
         <div class="container">
@@ -19,7 +21,7 @@
                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
                             echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
                         }else{
-                            echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
+                            echo '<button type="submit" name="product_sale_submit" class="btn btn-warning font-size-16 form-control">Add to Cart</button>';
                         }
                         ?>
                 </div>

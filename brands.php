@@ -1,6 +1,5 @@
 <?php
 //http://localhost/E-commerce-store-php/brands.php
-ob_start();
  // include header.php file
 include("./template/partials/header.php");
 /*  include special price section  */
