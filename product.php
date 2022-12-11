@@ -7,7 +7,7 @@ include("./template/partials/header.php");
 /*  include products-template  */
 include("./template/partials/products-template.php");
 /*  include top sale section */
-// include("./template/partials/top-sale.php");
+include("./template/partials/top-sale.php");
 // include footer.php file
 include("./template/partials/footer.php");
 ?>

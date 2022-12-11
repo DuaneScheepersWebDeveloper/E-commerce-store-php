@@ -19,10 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="row">
             <div class="col-sm-9">
                 <?php
-                    foreach ($product->getData('cart') as $item):
-                        $cart = $product->getProduct($item['item_id']);
-                        $subTotal[] = array_map(function ($item) {
-                    ?>
+                foreach ($product->getData('cart') as $item):
+                    $cart = $product->getProduct($item['item_id']);
+                    $subTotal[] = array_map(function ($item) {
+                ?>
                 <!-- cart item -->
                 <div class="row border-top py-3 mt-3">
                     <div class="col-sm-2">
@@ -51,11 +51,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                         <!-- product qty -->
                         <div class="qty d-flex pt-2">
-                        <div class="d-flex font-rale w-25">
-                                                <button class="qty-up border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
-                                                <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
-                                                <button data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
-                                            </div>
+                            <div class="d-flex font-rale w-25">
+                                <button class="qty-up border bg-light"
+                                    data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i
+                                        class="fas fa-angle-up"></i></button>
+                                <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>"
+                                    class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
+                                <button data-id="<?php echo $item['item_id'] ?? '0'; ?>"
+                                    class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+                            </div>
 
                             <form method="post">
                                 <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
@@ -83,10 +87,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <!-- !cart item -->
                 <?php
-                            return $item['item_price'];
-                        }, $cart); // closing array_map function
-                    endforeach;
-                        ?>
+                        return $item['item_price'];
+                    }, $cart); // closing array_map function
+                endforeach;
+                ?>
             </div>
             <!-- subtotal section-->
             <div class="col-sm-3">
