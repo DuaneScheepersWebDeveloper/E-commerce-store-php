@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i
                                         class="fas fa-angle-up"></i></button>
                                 <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>"
-                                    class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
+                                    class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1" max="<?php echo $item['item_quantity'] ?? 0; ?>">
                                 <button data-id="<?php echo $item['item_id'] ?? '0'; ?>"
                                     class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
                             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2022 at 06:39 AM
+-- Generation Time: Dec 14, 2022 at 02:32 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -38,7 +38,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
-(44, 1, 2);
+(59, 1, 5),
+(64, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -52,27 +53,28 @@ CREATE TABLE `product` (
   `item_name` varchar(255) NOT NULL,
   `item_price` double(10,2) NOT NULL,
   `item_image` varchar(255) NOT NULL,
-  `item_register` datetime DEFAULT NULL
+  `item_register` datetime DEFAULT NULL,
+  `item_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
-(1, 'Adidas', 'Hybrid 25 Boxing Gloves - Red - 14 oz', 489.00, './static/assets/images/1.png', NULL),
-(2, 'RDX', 'Boxing Gloves White and Red', 1159.00, './static/assets/images/2.png 	', NULL),
-(3, 'Everlast', 'MMA Grappling Training Gloves - S/M', 449.00, './static/assets/images/3.png', NULL),
-(4, 'Everlast', '1910 Fight Gloves – Gun Metal – 8oz', 1999.00, './static/assets/images/4.png 	', NULL),
-(5, 'Everlast', 'Everlast Pro Style Training Gloves - 8oz Pink', 439.00, './static/assets/images/5.png 	', NULL),
-(6, 'Everlast', 'Pro Style Elite Training Gloves - 14oz Gold', 679.00, './static/assets/images/6.png 	', NULL),
-(7, 'Ronex', 'Gold boxing gloves', 395.00, './static/assets/images/7.png ', NULL),
-(8, 'Adidas', 'Hybrid50 Black/Red Boxing Glove', 519.00, './static/assets/images/8.png ', NULL),
-(9, 'Adidas', 'Hybrid 50 Blk/Wh Boxing Glove', 569.00, './static/assets/images/9.png ', NULL),
-(10, 'Everlast', 'Pro Style Elite Training Gloves - White - 12oz', 749.00, './static/assets/images/10.png ', NULL),
-(11, 'Everlast', 'Everlast Vintage 1910 Heavy Bag Gloves', 439.00, './static/assets/images/11.png ', NULL),
-(12, 'RDX', 'Boxing Gloves Black/Gold', 1159.00, './static/assets/images/12.png ', NULL),
-(13, 'Venum', 'Impact Boxing Gloves Gold/Black', 1399.00, './static/assets/images/13.png ', NULL);
+INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`, `item_quantity`) VALUES
+(1, 'Adidas', 'Hybrid 25 Boxing Gloves - Red - 14 oz', 489.00, './static/assets/images/1.png', NULL, 7),
+(2, 'RDX', 'Boxing Gloves White and Red', 1159.00, './static/assets/images/2.png 	', NULL, 50),
+(3, 'Everlast', 'MMA Grappling Training Gloves - S/M', 449.00, './static/assets/images/3.png', NULL, 13),
+(4, 'Everlast', '1910 Fight Gloves – Gun Metal – 8oz', 1999.00, './static/assets/images/4.png 	', NULL, 0),
+(5, 'Everlast', 'Everlast Pro Style Training Gloves - 8oz Pink', 439.00, './static/assets/images/5.png 	', NULL, 12),
+(6, 'Everlast', 'Pro Style Elite Training Gloves - 14oz Gold', 679.00, './static/assets/images/6.png 	', NULL, 13),
+(7, 'Ronex', 'Gold boxing gloves', 395.00, './static/assets/images/7.png ', NULL, 15),
+(8, 'Adidas', 'Hybrid50 Black/Red Boxing Glove', 519.00, './static/assets/images/8.png ', NULL, 14),
+(9, 'Adidas', 'Hybrid 50 Blk/Wh Boxing Glove', 569.00, './static/assets/images/9.png ', NULL, 135),
+(10, 'Everlast', 'Pro Style Elite Training Gloves - White - 12oz', 749.00, './static/assets/images/10.png ', NULL, 3),
+(11, 'Everlast', 'Everlast Vintage 1910 Heavy Bag Gloves', 439.00, './static/assets/images/11.png ', NULL, 5),
+(12, 'RDX', 'Boxing Gloves Black/Gold', 1159.00, './static/assets/images/12.png ', NULL, 7),
+(13, 'Venum', 'Impact Boxing Gloves Gold/Black', 1399.00, './static/assets/images/13.png ', NULL, 8);
 
 -- --------------------------------------------------------
 
@@ -110,6 +112,14 @@ CREATE TABLE `wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`cart_id`, `user_id`, `item_id`) VALUES
+(54, 1, 12),
+(56, 1, 5);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -139,7 +149,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `product`

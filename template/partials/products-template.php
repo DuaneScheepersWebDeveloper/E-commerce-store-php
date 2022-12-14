@@ -1,13 +1,14 @@
 <?php
 shuffle($product_shuffle);
 // request method post
+$item_id = $_GET['item_id'] ?? 1;
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if (isset($_POST['product_sale_submit'])) {
     // call method addToCart
     $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
   }
 }
-$item_id = $_GET['item_id'] ?? 1;
+
 foreach ($product->getData() as $item):
   if ($item['item_id'] == $item_id):
 ?>
@@ -150,6 +151,9 @@ foreach ($product->getData() as $item):
               <button class="btn p-0 font-size-14">Extra Large</button>
             </div>
           </div>
+          <hr>
+          <h6>Currently <span><?php echo $item['item_quantity'] ?? 0; ?></span> available in stock</h6>
+
         </div>
 
 
